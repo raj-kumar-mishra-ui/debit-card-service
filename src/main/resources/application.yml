@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:carddb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+  h2:
+    console:
+      enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+card:
+  limits:
+    daily-debit: 100000.00
+    single-transaction: 25000.00
+  expiry-cron: "0 0 1 * * *"
+service:
+  region: local
