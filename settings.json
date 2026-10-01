@@ -1,0 +1,12 @@
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "interactive",
+    // Injects the full context package into every Copilot Chat prompt
+    "github.copilot.chat.codeGeneration.instructions": [
+        { "file": ".github/copilot-instructions.md" }
+        ], // Activates the 4-layer validation checklist on right-click review
+    "github.copilot.chat.reviewSelection.instructions": [
+        { "file": ".github/copilot-instructions.md" }
+    ],
+    "github.copilot.enable": { "*": true }
+}
